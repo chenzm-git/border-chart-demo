@@ -22,7 +22,9 @@ public class ChartController {
     @PostMapping(value = "/api/chart")
     public String chart(@RequestBody String input){
         log.info("chart 输入 : " + input);
+
         String output = chartService.chart(input);
+
         log.info("chart 输出 : " + output);
         return output;
     }

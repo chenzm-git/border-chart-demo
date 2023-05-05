@@ -32,7 +32,7 @@ public class ChartServiceImpl {
         try {
             HttpPost post = new HttpPost(url);
 
-            StringEntity entityIn = new StringEntity(new JSONObject(input).toString());
+            StringEntity entityIn = new StringEntity(input);
             post.setEntity(entityIn);
 
             // 执行get请求
